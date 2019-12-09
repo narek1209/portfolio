@@ -1,0 +1,24 @@
+@import '../../assets/styles/variables/variables',
+'../../assets/styles/mixins/mixins';
+nav {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: $primaryDark;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-self: end;
+        li {
+            @include reset-list;
+            a {
+                margin: 0 10px;
+                color: $primaryDark;
+                text-decoration: none;
+            }
+        }
+    }
+}
